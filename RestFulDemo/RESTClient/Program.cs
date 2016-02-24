@@ -17,14 +17,14 @@ namespace RESTClient
 {
     class Program
     {
-        internal const string QueueName = "productupdates";
+        internal const string QueueName = "";
 
         class AzureStorageConstants
         {
-            public static string Key = "tugVuwvqtJbgaBKChCp1asGvE2ruBiiqAaTDwlTt9P8FxXvz0+y0mmHwX/wnacIovSnyxBpyJrG8ufHE8Cln9g==";
+            public static string Key = "";
             public static string SharedKeyAuthorizationScheme = "SharedKey";
-            public static string Account = "boutydata";
-            public static string QueueEndPoint = "http://boutydata.queue.core.windows.net/";            
+            public static string Account = "";
+            public static string QueueEndPoint = "";            
         }
 
         class QueueMessage
@@ -65,7 +65,7 @@ namespace RESTClient
 
             Program p = new Program();
             p.GetMessage(QueueName);
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=http;AccountName=boutydata;AccountKey=tugVuwvqtJbgaBKChCp1asGvE2ruBiiqAaTDwlTt9P8FxXvz0+y0mmHwX/wnacIovSnyxBpyJrG8ufHE8Cln9g==");
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("");
             string t = storageAccount.QueueEndpoint.ToString();
             CloudQueueClient queueClient = new CloudQueueClient(storageAccount.QueueStorageUri, storageAccount.Credentials);            
             CloudQueue Queue = queueClient.GetQueueReference(QueueName);
